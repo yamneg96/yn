@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I prioritize client collaboration, fostering open communication",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -72,35 +72,39 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "A Movie Web-App for Trending Movies",
+    tp: "nyMOVIES",
+    des: "Explore movies from old to recent with search optimization feater added.",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    link: "https://nymovies.netlify.app",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
+    title: "Nike Clone: Your Ultimate Sportswear Destination",
+    tp: "nyNIKE",
+    des: "Shop a wide range of athletic gear and footwear, featuring user-friendly navigation.",
+    img: "/p2.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    link: "https://nynike.netlify.app",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    title: "Adama Bakery & Cake",
+    tp: "nyAdamaCake",
+    des: "Indulge in a variety of delicious cakes and pastries, made with quality ingredients and available for custom orders.",
+    img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://adamabakery.netlify.app",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "Admin Dashboard: Centralized Control Panel",
+    tp: "nyDashboard",
+    des: "Manage and monitor your application's performance with intuitive analytics, user management, and customizable settings.",
+    img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "https://nydashboard.netlify.app",
   },
 ];
 
@@ -205,13 +209,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/yamneg96",
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "https://x.com/MtntL55385",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/tg.png",
+    link: "https://t.me/user1name_123",
   },
 ];
