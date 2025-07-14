@@ -51,11 +51,25 @@ This project uses **Tailwind CSS v3.3.0** (not v4). Refer to the [Tailwind v3 do
 
 ## Deployment
 
-Deploy easily with [Vercel](https://vercel.com/). Run:
+Deploy easily with [Netlify](https://www.netlify.com/):
 
-```bash
-npm run deploy
-```
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket).
+2. Go to [Netlify](https://app.netlify.com/) and create a new site from Git.
+3. Connect your repository and set the build command to:
+
+   ```bash
+   npm run build
+   ```
+
+   and the publish directory to:
+
+   ```
+   .next
+   ```
+
+4. Click "Deploy Site".
+
+For more details, see the [Netlify Next.js documentation](https://docs.netlify.com/integrations/frameworks/next-js/).
 
 ## Notes
 
