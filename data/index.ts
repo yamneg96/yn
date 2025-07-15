@@ -114,24 +114,28 @@ export const testimonials = [
       "Collaborating with Yamlak was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Yamlak's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Abenezer Negash",
     title: "Radiology Technologist",
+    img: "/pro0.jpg",
   },
   {
     quote:
       "Collaborating with Yamlak was a game-changer for our project. His innovative approach and deep understanding of web development made all the difference. Highly recommended for anyone looking to enhance their online presence!",
     name: "Sana Matusala",
     title: "Developer and Civil Engineer",
+    img: "/pro1.jpg",
   },
   {
     quote:
       "Working with Yamlak exceeded our expectations. His professionalism and creativity transformed our ideas into reality. If you want to elevate your website, Yamlak is the right choice!",
     name: "Besukal Getamesay",
     title: "Electrical Engineer & IT Technologist",
+    img: "/pro2.jpg",
   },
   {
     quote:
       "Yamlak's expertise and dedication were invaluable to our project. He not only met our needs but also provided insights that improved our overall strategy. A fantastic partner for any web development journey!",
     name: "Samuel Tesfaye",
     title: "Economist & Architectural Engineer",
+    img: "/pro3.jpg",
   },
 ];
 
