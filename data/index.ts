@@ -118,8 +118,8 @@ export const testimonials = [
   {
     quote:
       "Collaborating with Yamlak was a game-changer for our project. His innovative approach and deep understanding of web development made all the difference. Highly recommended for anyone looking to enhance their online presence!",
-    name: "Fenet Tesfaye",
-    title: "College Student",
+    name: "Sana Matusala",
+    title: "Developer and Civil Engineer",
   },
   {
     quote:
