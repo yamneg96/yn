@@ -57,12 +57,12 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            A dedicated Next.js Developer based in Ethiopia, passionate about
+            A dedicated Web Developer based in Ethiopia, passionate about
             creating seamless and engaging web experiences. With a focus on
-            performance and user-centric design, Yalak combines technical
+            performance and user-centric design, combining technical
             expertise with creativity to bring innovative ideas to life.
           </p>
-          <img src="/yn2.ico" className="rounded-full"/>
+          <img src="/yn2.ico" className="rounded-full sm:mb-4" />
           <a href="#about">
             <MagicButton
               title="Show my work"

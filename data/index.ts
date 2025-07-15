@@ -121,7 +121,7 @@ export const testimonials = [
       "Collaborating with Yamlak was a game-changer for our project. His innovative approach and deep understanding of web development made all the difference. Highly recommended for anyone looking to enhance their online presence!",
     name: "Sana Matusala",
     title: "Developer and Civil Engineer",
-    img: "/pro1.jpg",
+    img: "/profile.svg",
   },
   {
     quote:

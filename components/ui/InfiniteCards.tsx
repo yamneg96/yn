@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { item } from "../../data/index";
+import { items } from "@/data/index";
 
 export const InfiniteMovingCards = ({
   items,
@@ -118,7 +118,11 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 {/* add this div for the profile img */}
                 <div className="me-3">
-                  <img src={item.img} alt="profile" className="w-10 h-10 rounded-full object-cover" />
+                  <img
+                    src={item.img}
+                    alt="profile"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                 </div>
                 <span className="flex flex-col gap-1">
                   {/* change text color, font-normal to font-bold, text-xl */}
