@@ -95,7 +95,7 @@ export const projects = [
     des: "Indulge in a variety of delicious cakes and pastries, made with quality ingredients and available for custom orders.",
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://adamabakery.netlify.app",
+    link: "https://www.figma.com/design/Y4Z45xzqdKZgNbDLYZS1ir/Untitled?node-id=0-1&t=x2YOZ2ARgvH1nAqv-1",
   },
   {
     id: 4,
