@@ -85,7 +85,7 @@ export const projects = [
     tp: "nyNIKE",
     des: "Shop a wide range of athletic gear and footwear, featuring user-friendly navigation.",
     img: "/p2.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/re.svg"],
     link: "https://nynike.netlify.app",
   },
   {
@@ -103,8 +103,17 @@ export const projects = [
     tp: "nyDashboard",
     des: "Manage and monitor your application's performance with intuitive analytics, user management, and customizable settings.",
     img: "/p4.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/re.svg"],
     link: "https://nydashboard.netlify.app",
+  },
+  {
+    id: 5,
+    title: "GreenLeaf: My Personal Herbarium (አረንጓዴ ቅጠል፡ የእፅዋት መዝገብ)",
+    tp: "GreenLeaf",
+    des: "GreenLeaf is a mobile application designed for plant enthusiasts, researchers, and nature lovers. It allows users to record plant species, log field observations, and manage botanical data with ease.",
+    img: "/p5.png",
+    iconLists: ["/android.svg", "/flutter.svg", "/django.svg", "/sqlite.svg"],
+    link: "https://github.com/yamneg96/GreenLeaf",
   },
 ];
 
@@ -118,14 +127,14 @@ export const testimonials = [
   },
   {
     quote:
-      "Collaborating with Yamlak was a game-changer for our project. His innovative approach and deep understanding of web development made all the difference. Highly recommended for anyone looking to enhance their online presence!",
+      "Working with Yamlak was a game-changer for our project. His innovative approach and deep understanding of web development made all the difference. Highly recommended for anyone looking to enhance their online presence!",
     name: "Sana Matusala",
     title: "Developer and Civil Engineer",
-    img: "/profile.svg",
+    img: "/pro1.jpg",
   },
   {
     quote:
-      "Working with Yamlak exceeded our expectations. His professionalism and creativity transformed our ideas into reality. If you want to elevate your website, Yamlak is the right choice!",
+      "Teaming with Yamlak exceeded my expectations. His professionalism and creativity transformed our ideas into reality. If you want to elevate your website, Yamlak is the right choice!",
     name: "Besukal Getamesay",
     title: "Electrical Engineer & IT Technologist",
     img: "/pro2.jpg",
@@ -182,15 +191,15 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Mobile App Dev",
+    desc: "Designed and developed mobile app for both iOS & Android platforms using Flutter.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Backend Developer Intern",
+    desc: "Utilized Django to develop a robust backend for a mobile application, integration with Flutter and Jetpack.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
