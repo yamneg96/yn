@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { items } from "@/data/index";
+// import { items } from "@/data/index";
 
 export const InfiniteMovingCards = ({
   items,
