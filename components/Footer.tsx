@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
+import * as Sentry from "@sentry/nextjs";
 
 const Footer = () => {
   return (
@@ -49,6 +50,13 @@ const Footer = () => {
               </div>
             </a>
           ))}
+          <button
+            className="ml-4 cursor-pointer px-4 py-2 rounded-lg bg-white text-black hover:bg-purple-700 transition"
+            onClick={() => Sentry.showReportDialog()}
+            type="button"
+          >
+            Report a Bug
+          </button>
         </div>
       </div>
     </footer>
