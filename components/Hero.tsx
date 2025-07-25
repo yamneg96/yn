@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -59,10 +60,16 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             A dedicated Web Developer based in Ethiopia, passionate about
             creating seamless and engaging web experiences. With a focus on
-            performance and user-centric design, combining technical
-            expertise with creativity to bring innovative ideas to life.
+            performance and user-centric design, combining technical expertise
+            with creativity to bring innovative ideas to life.
           </p>
-          <img src="/yn2.ico" className="rounded-full sm:mb-4" />
+          <Image
+            src="/yn2.ico"
+            className="rounded-full sm:mb-4"
+            alt="Profile Icon"
+            width={64}
+            height={64}
+          />
           <a href="#about">
             <MagicButton
               title="Show my work"
