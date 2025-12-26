@@ -179,6 +179,18 @@ export const companies = [
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
+  {
+    id: 6,
+    name: "Ethronics.",
+    img: "/ethro.png",
+    // nameImg: "/ethronics.png",
+  },
+  {
+    id: 7,
+    name: "NYDev.",
+    img: "/nydev.svg",
+    // nameImg: "/NY Development.png",
+  },
 ];
 
 export const workExperience = [
@@ -192,7 +204,7 @@ export const workExperience = [
   {
     id: 2,
     title: "Mobile App Dev",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using Flutter.",
+    desc: "Designed and developed mobile app for both iOS & Android platforms using ReactNative.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },

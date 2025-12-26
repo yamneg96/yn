@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-
-// 1. New modern Lottie import
 import Lottie from "lottie-react";
 
 import { cn } from "@/lib/utils";
@@ -51,8 +49,9 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NextJS", "GraphQL"];
+  // Updated Tech Stack for MERN & AI focus
+  const leftLists = ["React.js", "Express", "TypeScript"];
+  const rightLists = ["Node.js", "Next.js", "Python/AI"];
 
   const [copied, setCopied] = useState(false);
 
@@ -66,13 +65,13 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
+        background: "rgb(2,6,23)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "linear-gradient(90deg, rgba(2,6,23,1) 0%, rgba(10,25,50,1) 100%)",
       }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -81,7 +80,10 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(
+                imgClassName,
+                "object-cover object-center opacity-50 group-hover:opacity-100 transition duration-500"
+              )}
             />
           )}
         </div>
@@ -103,7 +105,7 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+            {/* Gradient logic handled in component below */}
           </BackgroundGradientAnimation>
         )}
 
@@ -113,11 +115,13 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          {/* Enhanced contrast for description */}
+          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#e2e8f0] z-10">
             {description}
           </div>
+          {/* Bold high-contrast title */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-white mt-2`}
           >
             {title}
           </div>
@@ -130,19 +134,19 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-70 lg:opacity-100 rounded-lg text-center bg-[#0f172a] border border-blue-500/20 text-blue-100"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#0f172a]"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#0f172a]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-70 lg:opacity-100 rounded-lg text-center bg-[#0f172a] border border-blue-500/20 text-blue-100"
                   >
                     {item}
                   </span>
@@ -154,7 +158,6 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0 block`}>
-                {/* 2. Simplified Lottie Component */}
                 <Lottie
                   animationData={animationData}
                   loop={copied}
@@ -168,7 +171,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#020617] border border-blue-500/30"
               />
             </div>
           )}
