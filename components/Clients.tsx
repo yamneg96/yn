@@ -3,6 +3,7 @@
 import React from "react";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
+import Image from "next/image";
 
 const Clients = () => {
   return (
@@ -27,12 +28,12 @@ const Clients = () => {
               key={company.id}
               className="cursor-pointer flex md:max-w-60 max-w-32 gap-3 group"
             >
-              <img
+              <Image
                 src={company.img}
                 alt={company.name}
                 className="md:w-10 w-5 group-hover:grayscale-0 transition-all duration-300"
               />
-              <img
+              <Image
                 src={company.nameImg}
                 alt={company.name}
                 width={company.id === 4 || company.id === 5 ? 100 : 150}

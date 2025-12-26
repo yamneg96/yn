@@ -179,18 +179,6 @@ export const companies = [
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
-  {
-    id: 6,
-    name: "Ethronics.",
-    img: "/ethro.png",
-    // nameImg: "/ethronics.png",
-  },
-  {
-    id: 7,
-    name: "NYDev.",
-    img: "/nydev.svg",
-    // nameImg: "/NY Development.png",
-  },
 ];
 
 export const workExperience = [
