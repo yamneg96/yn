@@ -63,13 +63,21 @@ const Hero = () => {
             performance and user-centric design, combining technical expertise
             with creativity to bring innovative ideas to life.
           </p>
-          <Image
-            src="/yn2.ico"
-            className="rounded-full sm:mb-4"
-            alt="Profile Icon"
-            width={64}
-            height={64}
-          />
+          {/* Updated larger rectangular image box */}
+          <div className="relative group mb-4">
+            {/* Subtle glow behind the box */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+            <div className="relative rounded-2xl border border-white/[0.1] bg-[#000319] p-1 shadow-2xl">
+              <Image
+                src="/yn2.ico"
+                className="rounded-xl object-cover"
+                alt="Profile Icon"
+                width={120}
+                height={120}
+              />
+            </div>
+          </div>
           <a href="#about">
             <MagicButton
               title="Show my work"
