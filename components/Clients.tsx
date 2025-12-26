@@ -31,12 +31,15 @@ const Clients = () => {
               <Image
                 src={company.img}
                 alt={company.name}
+                width={20}
+                height={20}
                 className="md:w-10 w-5 group-hover:grayscale-0 transition-all duration-300"
               />
               <Image
                 src={company.nameImg}
                 alt={company.name}
                 width={company.id === 4 || company.id === 5 ? 100 : 150}
+                height={20}
                 className="text-white md:w-24 w-20 opacity-100 group-hover:opacity-100 transition-all duration-300"
               />
             </div>

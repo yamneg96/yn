@@ -29,7 +29,7 @@ const MagicButton = ({
 
       <span
         className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg
-             bg-[#111f88] px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 tracking-wider transition-colors duration-300 group-hover:text-blue-100 ${otherClasses}`}
+             bg-[#273ac6] px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 tracking-wider transition-colors duration-300 group-hover:text-blue-100 ${otherClasses}`}
       >
         {position === "left" && (
           <span className="transition-transform duration-300 group-hover:-translate-x-1">
