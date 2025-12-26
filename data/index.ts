@@ -104,7 +104,7 @@ export const projects = [
     des: "Manage and monitor your application's performance with intuitive analytics, user management, and customizable settings.",
     img: "/pn.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/re.svg"],
-    link: "https://pn-jet.netlify.app",
+    link: "https://pn-jet.vercel.app",
   },
   {
     id: 5,
