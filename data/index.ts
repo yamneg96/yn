@@ -115,6 +115,24 @@ export const projects = [
     iconLists: ["/android.svg", "/flutter.svg", "/django.svg", "/sqlite.svg"],
     link: "https://github.com/yamneg96/GreenLeaf",
   },
+  {
+    id: 6,
+    title: "Ethiopian Banking App Reviews Analysis",
+    tp: "Banking Sentiment Analysis",
+    des: "A data-driven NLP project that analyzes user reviews from major Ethiopian banking applications to extract sentiment and actionable UX insights. The system automates review scraping, preprocessing, sentiment classification, and topic extraction to support evidence-based product improvements.",
+    img: "/p6.png",
+    iconLists: ["/python.svg", "/bert.svg", "/sklearn.svg", "/nlp.svg"],
+    link: "https://github.com/yamneg96/Customer-Experience-Analytics",
+  },
+  {
+    id: 7,
+    title: "AlphaCare Insurance Solutions: Risk & Premium Optimization",
+    tp: "Insurance ML Optimization",
+    des: "A machine learning solution for car insurance risk assessment and premium optimization. The project applies predictive modeling, experiment versioning, and explainable AI techniques to estimate claim risk and generate transparent, data-driven pricing recommendations.",
+    img: "/p7.png",
+    iconLists: ["/python.svg", "/xgboost.svg", "/sklearn.svg", "/dvc.svg"],
+    link: "https://github.com/yamneg96/acis-risk-analysis",
+  },
 ];
 
 export const testimonials = [
