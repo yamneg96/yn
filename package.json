@@ -15,6 +15,7 @@
     "@sentry/nextjs": "^9.38.0",
     "@tabler/icons-react": "^3.1.0",
     "@types/three": "^0.163.0",
+    "@vercel/analytics": "^1.6.1",
     "baseline-browser-mapping": "^2.9.11",
     "caniuse-lite": "^1.0.30001761",
     "class-variance-authority": "^0.7.0",
