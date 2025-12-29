@@ -234,17 +234,34 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    name: "GitHub",
     img: "/git.svg",
     link: "https://github.com/yamneg96",
+    label: "Check out my repositories on GitHub",
+    duration: 3000,
   },
   {
     id: 2,
+    name: "X",
     img: "/twit.svg",
     link: "https://x.com/MtntL55385",
+    label: "Follow my latest updates on X",
+    duration: 3000,
   },
   {
     id: 3,
+    name: "Telegram",
     img: "/tg.png",
     link: "https://t.me/user1name_123",
+    label: "Let's chat directly on Telegram",
+    duration: 3000,
+  },
+  {
+    id: 4,
+    name: "Upwork",
+    img: "/upwork.png",
+    link: "https://www.upwork.com/freelancers/~01f9a25c19a4aae39e?mp_source=share",
+    label: "Available for Hire! Let's work together",
+    duration: 6000, // 2x longer than the others
   },
 ];
