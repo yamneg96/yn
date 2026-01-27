@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js 🚀
+            Full-Stack Developer | React, Node.js & Django
           </p>
 
           {/**
@@ -53,16 +53,17 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Elevating Web Development with Next.js from Ethiopia: Yamlak SWE"
+            words="Designing Scalable, Reliable Full-Stack Systems"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            A dedicated Web Developer based in Ethiopia, passionate about
-            creating seamless and engaging web experiences. With a focus on
-            performance and user-centric design, combining technical expertise
-            with creativity to bring innovative ideas to life.
+            I build full-stack systems designed for scale, reliability, and
+            long-term evolution. My focus is on how applications behave under
+            real usage—making architectural decisions that balance performance,
+            security, and maintainability across the entire system.
           </p>
+
           {/* Updated larger rectangular image box */}
           <div className="relative group mb-4">
             {/* Subtle glow behind the box */}
