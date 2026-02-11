@@ -72,6 +72,24 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 9,
+    title: "PHARMAWISE | PW",
+    tp: "PW",
+    des: "Connecting patients with verified doctors and pharmacists for safer healthcare outcomes. Access drug information, prescriptions, and expert advice instantly.",
+    img: "/pw.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/gsap.svg"],
+    link: "https://pharmawise-delta.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "School Management System | SJCS",
+    tp: "SJCS",
+    des: "Empowering students to achieve academic excellence and spiritual growth in a supportive community environment. Manage your education journey with our comprehensive digital platform.",
+    img: "/sjcs.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/gsap.svg"],
+    link: "https://sjcs-web-a65p.vercel.app",
+  },
+  {
     id: 1,
     title: "Bed Notification System | BNS",
     tp: "BNS",
