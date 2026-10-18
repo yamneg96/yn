@@ -1,0 +1,40 @@
+# Local development stack.
+#
+#   docker compose up -d mongo     # just MongoDB (then run the API with `npm run dev:api`)
+#   docker compose up --build      # MongoDB + the API container
+#
+# With only `mongo` running, set in backend/.env:
+#   MONGODB_URI=mongodb://localhost:27017/portfolio
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    env_file: ./backend/.env
+    environment:
+      # Inside the compose network the database host is the service name.
+      MONGODB_URI: mongodb://mongo:27017/portfolio
+      NODE_ENV: production
+    ports:
+      - "5000:5000"
+    volumes:
+      - api-uploads:/app/uploads
+
+volumes:
+  mongo-data:
+  api-uploads:

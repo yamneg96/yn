@@ -1,0 +1,35 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# builds
+dist
+build
+.next
+out
+
+# env files — never commit secrets (the .example files are safe)
+.env
+.env.*
+!.env.example
+.env*.local
+.env.sentry-build-plugin
+
+# uploads created by the local dev API
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# logs / tooling
+npm-debug.log*
+yarn-debug.log*
+*.log
+.DS_Store
+*.pem
+*.tsbuildinfo
+coverage
+.vercel
+.sentryclirc
+
+# any *.env file (e.g. atlas-credentials.env) holds secrets — never commit
+*.env

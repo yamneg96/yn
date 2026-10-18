@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "Yamlak Negash — MERN portfolio (web = React + Vite, backend = Express + MongoDB)",
+  "scripts": {
+    "dev": "concurrently -n api,web,admin -c cyan,magenta,yellow \"npm run dev:api\" \"npm run dev:web\" \"npm run dev:admin\"",
+    "dev:api": "npm --prefix backend run dev",
+    "dev:web": "npm --prefix web run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "build": "npm --prefix backend run build && npm --prefix web run build && npm --prefix admin run build",
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend test",
+    "install:all": "npm --prefix backend install && npm --prefix web install && npm --prefix admin install",
+    "db:up": "docker compose up -d mongo"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
