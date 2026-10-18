@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Yamlak Negash · Full-Stack Engineer</title>
+    <meta name="description" content="Full-stack engineer in Addis Ababa building fintech, healthcare and marketplace systems that ship. Browse live case files." />
+    <meta name="theme-color" content="#04060f" />
+    <meta property="og:title" content="Yamlak Negash · Full-Stack Engineer" />
+    <meta property="og:description" content="Live case files for the systems I have shipped: fintech, healthcare, marketplaces and AI." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Set the theme before first paint so there is no flash.
+      try {
+        var t = localStorage.getItem("yn-theme");
+        document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
