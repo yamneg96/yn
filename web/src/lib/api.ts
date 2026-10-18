@@ -3,7 +3,10 @@
  *
  * - In development Vite proxies `/api` and `/uploads` to the backend (see vite.config.ts),
  *   so VITE_API_URL can stay empty and cookies are same-origin.
- * - In production set VITE_API_URL to the deployed API origin; requests are sent with
+ * - In production on Vercel leave VITE_API_URL EMPTY: vercel.json rewrites /api to the backend, so the
+ *   browser only ever talks to its own domain and the login cookie stays first-party (a cookie set by
+ *   a different *.vercel.app site is a third-party cookie and gets blocked). Set VITE_API_URL only when
+ *   the API is on a custom domain under the same registrable domain as the app. Requests are sent with
  *   `credentials: "include"` so the httpOnly auth cookie travels cross-origin.
  */
 const BASE_URL: string = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "")

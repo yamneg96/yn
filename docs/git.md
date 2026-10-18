@@ -156,6 +156,17 @@ Newest first. One block per landed change; copy the commit command you actually 
 
 ### 2026-10-18
 
+- **fix(admin,web): keep the login across reloads on Vercel.** The admin on `yn-admin.vercel.app`
+  and the API on `yn-backend.vercel.app` are different *sites* (`vercel.app` is a public suffix), so
+  the session cookie was third-party and browsers blocked it: login "worked", then `/auth/me` was 401
+  on reload and every admin request failed. Each frontend now has a `vercel.json` that rewrites
+  `/api/*` to the backend, so the browser only talks to its own domain and the cookie is first-party.
+  **In both Vercel frontend projects, delete the `VITE_API_URL` variable (leave it empty) and redeploy.**
+  ```bash
+  git add admin web docs/git.md
+  git commit -m "fix(admin): proxy /api through Vercel so the session cookie is first-party" -m "yn-admin.vercel.app and yn-backend.vercel.app are different sites, so the httpOnly session cookie was a third-party cookie that browsers blocked: login succeeded but the next request had no cookie and /auth/me returned 401. vercel.json now rewrites /api/* to the backend and adds the SPA fallback, so the browser only talks to its own origin. The web app gets the same config. VITE_API_URL must be left empty in production."
+  git push origin main
+  ```
 - **fix(backend): allow the site and admin origins in CORS.** `localhost:5173`, `localhost:5174`,
   `https://yamlak-ecru.vercel.app` (web) and `https://yn-admin.vercel.app` (admin) are built in;
   `CLIENT_URL` only adds extras. Trailing slashes are ignored. The web and admin Vercel projects need
