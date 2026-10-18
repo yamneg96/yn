@@ -3,6 +3,16 @@ import jwt from "jsonwebtoken";
 import { env } from "../config/env";
 import { ApiError } from "../utils/http";
 
+// Declared here (not in a loose .d.ts) so every compiler run that imports this module sees it,
+// including Vercel's per-entry build.
+declare global {
+  namespace Express {
+    interface Request {
+      user?: { id: string; email: string };
+    }
+  }
+}
+
 export const COOKIE_NAME = "portfolio_token";
 
 type TokenPayload = { sub: string; email: string };

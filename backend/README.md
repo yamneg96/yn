@@ -142,6 +142,12 @@ Adding a new content type = one model, one zod schema, one `createResource(...)`
 - Set `NODE_ENV=production`, `CLIENT_URL` to the deployed site origin, and a strong `JWT_SECRET`.
 - In production the cookie is `Secure; SameSite=None` so it works across the site/API origins —
   both must be served over HTTPS.
+- **Vercel:** create a project with *Root Directory* `backend`. `api/index.ts` is the serverless entry
+  and `vercel.json` rewrites every path to it, so Express keeps routing. Add these environment variables
+  in the project settings: `MONGODB_URI`, `JWT_SECRET`, `CLIENT_URL` (comma-separated: the site and
+  admin origins, no trailing slash), `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `IMAGEKIT_PRIVATE_KEY`,
+  `IMAGEKIT_URL_ENDPOINT`, `IMAGEKIT_FOLDER`. Vercel's disk is read-only, so uploads must use ImageKit.
+  The login/message rate limits are per warm instance on serverless.
 - Use a MongoDB Atlas IP allow-list that includes your host's outbound IPs (or `0.0.0.0/0` with a
   strong DB password).
 - Run `npm run seed` once against production, then rotate/remove `ADMIN_PASSWORD`.

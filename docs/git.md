@@ -156,6 +156,18 @@ Newest first. One block per landed change; copy the commit command you actually 
 
 ### 2026-10-18
 
+- **fix(backend): Vercel build + serverless entry.** Vercel's TypeScript run compiles from the entry
+  file only, so the global `src/types/express.d.ts` was never loaded (`Property 'user' does not exist
+  on type 'Request'`). The `Request.user` augmentation now lives in `middleware/auth.ts`; added
+  `api/index.ts` (serverless handler that reuses the Mongo connection) and `vercel.json` (rewrite all
+  paths to it). Set the Vercel root directory to `backend` and add the env vars listed in
+  `backend/README.md`.
+  ```bash
+  git add backend/src backend/api backend/vercel.json backend/tsconfig.json backend/README.md docs/git.md
+  git commit -m "fix(backend): make the build pass on Vercel and add a serverless entry" -m "Vercel compiles TypeScript from the entry file only, so the global express.d.ts augmentation for req.user was never loaded and the build failed with TS2339. The augmentation now lives in the auth middleware that uses it. Adds api/index.ts, a handler that creates the Express app once per warm instance and reuses the Mongo connection, and vercel.json to route every path to it. Documents the required environment variables."
+  git push origin main
+  ```
+
 - **chore(repo): remove the Next.js app.** `legacy-next/` deleted from disk; the 107 tracked Next.js
   files are gone from the working tree; the GitHub history rewrite is §3.
 - **feat(upload): ImageKit.** Uploads (covers, avatars, PDF resume) go to ImageKit folder
