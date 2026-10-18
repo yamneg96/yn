@@ -156,15 +156,16 @@ Newest first. One block per landed change; copy the commit command you actually 
 
 ### 2026-10-18
 
-- **fix(backend): Vercel build + serverless entry.** Vercel's TypeScript run compiles from the entry
-  file only, so the global `src/types/express.d.ts` was never loaded (`Property 'user' does not exist
-  on type 'Request'`). The `Request.user` augmentation now lives in `middleware/auth.ts`; added
-  `api/index.ts` (serverless handler that reuses the Mongo connection) and `vercel.json` (rewrite all
-  paths to it). Set the Vercel root directory to `backend` and add the env vars listed in
-  `backend/README.md`.
+- **fix(backend): Vercel build and runtime.** Two failures. (1) The build: Vercel compiles TypeScript
+  from the entry file only, so the global `src/types/express.d.ts` was never loaded (`Property 'user'
+  does not exist on type 'Request'`); the `Request.user` augmentation now lives in `middleware/auth.ts`.
+  (2) The runtime: Vercel's Express preset imports `src/app` and needs the app as the **default
+  export** (`Invalid export found in module .../src/app.js`); `app.ts` now default-exports the app and
+  connects to MongoDB lazily on the first request (`ensureDb`) when `VERCEL` is set. Set the Vercel
+  root directory to `backend` and add the env vars listed in `backend/README.md`.
   ```bash
-  git add backend/src backend/api backend/vercel.json backend/tsconfig.json backend/README.md docs/git.md
-  git commit -m "fix(backend): make the build pass on Vercel and add a serverless entry" -m "Vercel compiles TypeScript from the entry file only, so the global express.d.ts augmentation for req.user was never loaded and the build failed with TS2339. The augmentation now lives in the auth middleware that uses it. Adds api/index.ts, a handler that creates the Express app once per warm instance and reuses the Mongo connection, and vercel.json to route every path to it. Documents the required environment variables."
+  git add backend/src backend/tsconfig.json backend/README.md docs/git.md
+  git commit -m "fix(backend): make the API deploy on Vercel" -m "Vercel compiles from the entry file only, so the global express.d.ts augmentation for req.user was never loaded and the build failed with TS2339; the augmentation now lives in the auth middleware. Vercel's Express runtime also requires the app as the default export of src/app, so app.ts exports it and connects to MongoDB lazily on the first request when running on Vercel. Documents the required environment variables."
   git push origin main
   ```
 

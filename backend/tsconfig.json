@@ -12,6 +12,6 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "scripts", "api"],
+  "include": ["src", "scripts"],
   "exclude": ["node_modules", "dist"]
 }
