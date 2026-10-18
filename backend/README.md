@@ -41,7 +41,7 @@ Check it is alive: `curl http://localhost:5000/api/health` →
 | `MONGODB_URI`            |    yes   | Atlas or local. URL-encode special characters in the password.           |
 | `JWT_SECRET`             |    yes   | ≥ 16 chars. `node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"` |
 | `PORT`                   |    no    | Default `5000`                                                           |
-| `CLIENT_URL`             |    no    | Origin(s) of the React app, comma-separated. Default `http://localhost:5173` |
+| `CLIENT_URL`             |    no    | Extra allowed origin(s), comma-separated. `localhost:5173/5174`, `yamlak-ecru.vercel.app` (site) and `yn-admin.vercel.app` (admin) are always allowed |
 | `PUBLIC_URL`             |    no    | Public base URL of this API (used for local upload links)                |
 | `JWT_EXPIRES_IN`         |    no    | Default `7d`                                                             |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | seed only | Used by `npm run seed`; rotate after first run                  |

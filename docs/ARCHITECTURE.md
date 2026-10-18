@@ -96,7 +96,7 @@ Full table: [`backend/README.md`](../backend/README.md#api-reference).
    body, so page JavaScript can never read it.
 3. `requireAuth` accepts the cookie or an `Authorization: Bearer` header (for scripts/tools).
 4. Login is rate-limited (10 attempts / 15 min / IP). Helmet sets security headers; CORS allows
-   only the configured `CLIENT_URL` origins, with credentials.
+   only the built-in site/admin origins plus any extra `CLIENT_URL` origins, with credentials.
 5. Uploads: image MIME allow-list, 5 MB cap, filenames sanitised, memory storage (no temp files).
 6. Secrets live only in `backend/.env` (git-ignored); `env.ts` fails fast with a precise message.
 

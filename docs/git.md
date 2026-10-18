@@ -156,6 +156,15 @@ Newest first. One block per landed change; copy the commit command you actually 
 
 ### 2026-10-18
 
+- **fix(backend): allow the site and admin origins in CORS.** `localhost:5173`, `localhost:5174`,
+  `https://yamlak-ecru.vercel.app` (web) and `https://yn-admin.vercel.app` (admin) are built in;
+  `CLIENT_URL` only adds extras. Trailing slashes are ignored. The web and admin Vercel projects need
+  `VITE_API_URL` set to the API origin.
+  ```bash
+  git add backend/src backend/tests backend/.env.example backend/README.md docs
+  git commit -m "fix(backend): allow the web and admin origins in CORS" -m "Browsers on yamlak-ecru.vercel.app and yn-admin.vercel.app (and the local dev ports) were blocked by CORS when CLIENT_URL did not list them. The four origins are now built in, CLIENT_URL adds extras, trailing slashes are normalised, and a test covers allowed and rejected origins."
+  git push origin main
+  ```
 - **fix(backend): Vercel build and runtime.** Two failures. (1) The build: Vercel compiles TypeScript
   from the entry file only, so the global `src/types/express.d.ts` was never loaded (`Property 'user'
   does not exist on type 'Request'`); the `Request.user` augmentation now lives in `middleware/auth.ts`.

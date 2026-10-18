@@ -79,6 +79,16 @@ describe("health & errors", () => {
     expect(json.body).toMatchObject({ status: "ok" });
   });
 
+  it("allows CORS (with credentials) for the site and admin origins only", async () => {
+    for (const origin of ["http://localhost:5173", "http://localhost:5174", "https://yamlak-ecru.vercel.app", "https://yn-admin.vercel.app"]) {
+      const res = await request(app).options("/api/projects").set("Origin", origin).set("Access-Control-Request-Method", "GET");
+      expect(res.headers["access-control-allow-origin"]).toBe(origin);
+      expect(res.headers["access-control-allow-credentials"]).toBe("true");
+    }
+    const other = await request(app).options("/api/projects").set("Origin", "https://evil.example").set("Access-Control-Request-Method", "GET");
+    expect(other.headers["access-control-allow-origin"]).toBeUndefined();
+  });
+
   it("returns JSON 404 for unknown routes", async () => {
     const res = await request(app).get("/api/does-not-exist");
     expect(res.status).toBe(404);

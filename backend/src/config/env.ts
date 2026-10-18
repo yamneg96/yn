@@ -31,8 +31,21 @@ if (!parsed.success) {
   throw new Error(`Invalid environment configuration:\n${issues}`);
 }
 
+/** The site and admin apps, always allowed. CLIENT_URL can add more (e.g. a preview deployment). */
+const DEFAULT_ORIGINS = [
+  "http://localhost:5173", // web (dev)
+  "http://localhost:5174", // admin (dev)
+  "https://yamlak-ecru.vercel.app", // web
+  "https://yn-admin.vercel.app", // admin
+];
+
+const allowedOrigins = [
+  ...new Set([...DEFAULT_ORIGINS, ...parsed.data.CLIENT_URL.split(",")].map((o) => o.trim().replace(/\/+$/, "")).filter(Boolean)),
+];
+
 export const env = {
   ...parsed.data,
   PUBLIC_URL: parsed.data.PUBLIC_URL ?? `http://localhost:${parsed.data.PORT}`,
   isProd: parsed.data.NODE_ENV === "production",
+  allowedOrigins,
 };

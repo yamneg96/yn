@@ -24,7 +24,7 @@ export function createApp() {
   );
   app.use(
     cors({
-      origin: env.CLIENT_URL.split(",").map((o) => o.trim()),
+      origin: env.allowedOrigins,
       credentials: true,
     })
   );
